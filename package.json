@@ -1,11 +1,11 @@
 {
-  "name": "[TODO: project-name]",
-  "description": "[TODO: description]",
+  "name": "Nitramjs-skeleton",
+  "description": "App skeleton with Node.js + Express.js + Jade + jQuery + History.js + Require.js + Nitram.js",
   "version": "0.0.1",
   "locale": "[TODO: en]",
   "author": {
-    "name": "[TODO: author]",
-    "email": "[TODO: author e-mail]"
+    "name": "Martin Schaer",
+    "email": "martin@interaction.cr"
   },
   "engines": {
     "node": "0.10.x",

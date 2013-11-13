@@ -13,6 +13,7 @@ var api = require('../app/controllers/api')
 module.exports = function(app) {
   // main
   app.get('/', main.home)
+  app.get('/helloworld', main.helloworld)
 
   //
   // API

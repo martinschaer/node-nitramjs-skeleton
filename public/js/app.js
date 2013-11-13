@@ -1,4 +1,4 @@
-define(['jquery', 'handlebars', 'history'], function($, Handlebars) {
+define(['jquery', 'history'], function($, Handlebars) {
   'use strict';
 
   var A = {
@@ -11,7 +11,12 @@ define(['jquery', 'handlebars', 'history'], function($, Handlebars) {
     routes: {
       '/': {
         controller: 'homeController',
-        title: '[TODO: title]',
+        title: 'Home',
+        req: true
+      },
+      '/helloworld': {
+        controller: 'helloWorldController',
+        title: 'Hello World',
         req: true
       }
     },
@@ -20,15 +25,23 @@ define(['jquery', 'handlebars', 'history'], function($, Handlebars) {
     // Controllers
     // ----------------------
 
-    homeController: function(route, data) {},
+    homeController: function(route, data) {
+      // compile to intercept new links
+      A.compile($('#mainView').html(data));
+    },
+
+    helloWorldController: function(route, data) {
+      // compile to intercept new links
+      A.compile($('#mainView').html(data));
+    },
 
     // ----------------------
     // Services
     // ----------------------
 
-    helloWorld: function() {
-      return 'Hello World';
-    },
+    // helloWorld: function() {
+    //   return 'Hello World';
+    // },
 
     // ----------------------
     // Core

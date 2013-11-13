@@ -12,7 +12,7 @@ require.config({
       'export': 'FB'
     },
     'app': {
-      deps: ['jquery', 'history', 'handlebars']
+      deps: ['jquery', 'history']
     },
     'history': {
       deps: ['jquery']

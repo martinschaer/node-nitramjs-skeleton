@@ -31,13 +31,10 @@ var parentController = function(req, res, ifXHR) {
   xhrHelper.isXHR(req, ifXHR, function() {
     res.render('home', {
       title: config.title,
-      data: data,
       config: config,
-      host: req.headers.host,
+      // host: req.headers.host,
       url: url,
-      bodyClass: 'home',
-      navtitle: 'Inicio',
-      campos: data.campos
+      bodyClass: 'home'
     })
   })
 }
@@ -47,5 +44,16 @@ var parentController = function(req, res, ifXHR) {
 // Home
 //
 exports.home = function(req, res) {
-  parentController(req, res)
+  parentController(req, res, function() {
+    res.render('partials/home')
+  })
+}
+
+//
+// Hello World
+//
+exports.helloworld = function(req, res) {
+  parentController(req, res, function() {
+    res.render('partials/helloworld')
+  })
 }
