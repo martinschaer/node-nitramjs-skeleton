@@ -5,6 +5,7 @@ require.config({
     'facebook': '//connect.facebook.net/es_ES/all',
     'history': '//cdnjs.cloudflare.com/ajax/libs/history.js/1.8/bundled/html5/native.history',
     // 'handlebars': '//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.0/handlebars.min',
+    'nitram': 'lib/nitram',
     'app': 'app'
   },
   shim: {
@@ -12,7 +13,7 @@ require.config({
       'export': 'FB'
     },
     'app': {
-      deps: ['jquery', 'history']
+      deps: ['jquery', 'history', 'nitram']
     },
     'history': {
       deps: ['jquery']
@@ -57,9 +58,6 @@ require(['jquery', 'app', 'fb', 'history'], function($, app) {
     if (DBG) console.log('Ready!');
 
     if (typeof APPGLOBALS == 'undefined') return;
-
-    // init
-    app.init();
 
     // export del modulo para poderlo ver desde la consola
     APPGLOBALS.app = app;
