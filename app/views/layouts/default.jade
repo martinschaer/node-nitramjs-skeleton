@@ -1,0 +1,27 @@
+doctype 5
+html
+  head
+    meta(charset="utf-8")
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")><![endif]-->
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    title= title
+    meta(http-equiv="Content-type", content="text/html;charset=UTF-8")
+    meta(name="description", content="")
+    base(href="/")
+
+    include ../includes/ogmetatags
+
+    link(href="/img/favicon.ico", rel="shortcut icon", type="image/x-icon")
+
+    link(href='http://fonts.googleapis.com/css?family=Lato:100,400,700,100italic,400italic,700italic', rel='stylesheet', type='text/css')
+
+    link(rel="stylesheet", href="/css/style.css")
+
+    script(id="requirescript", data-main='js/main', src='js/lib/require.js')
+    script.
+      document.getElementById('requirescript').setAttribute("data-main", "js/main");
+  body(class="#{typeof bodyClass == 'undefined' ? '' : bodyClass}")
+    
+    block content
+
+    include ../includes/foot

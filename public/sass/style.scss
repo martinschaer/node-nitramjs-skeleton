@@ -1,0 +1,39 @@
+//
+// Imports
+//
+
+@import "compass/typography/vertical_rhythm";
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/css3/transition";
+
+@import "libs/reset";
+@import "libs/settings";
+@import "libs/mixins";
+@import "libs/typography";
+@import "libs/buttons";
+
+//
+// Constants
+//
+
+
+
+//
+// Style
+//
+
+@include establish-baseline();
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: $lato;
+  background-color: $bunker;
+}
+
+.align-center {
+  text-align: center;
+}
