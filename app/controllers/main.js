@@ -9,7 +9,6 @@ var config = require('../../config/config')[env]
 // Dependencias
 
 // var data = require('../../config/data')
-var xhrHelper = require('../../lib/xhr-helper')
 
 // -----------------------
 // Controller Actions
@@ -28,7 +27,9 @@ var parentController = function(req, res, ifXHR) {
     }
   }
 
-  xhrHelper.isXHR(req, ifXHR, function() {
+  if (req.xhr) {
+    ifXHR();
+  } else {
     res.render('home', {
       title: config.title,
       config: config,
@@ -36,7 +37,7 @@ var parentController = function(req, res, ifXHR) {
       url: url,
       bodyClass: 'home'
     })
-  })
+  }
 }
 
 
