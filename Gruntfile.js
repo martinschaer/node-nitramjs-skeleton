@@ -48,7 +48,12 @@ module.exports = function(grunt) {
             name: 'main'
           }],
           locale: '<%= pkg.locale %>',
-          optimizeCss: 'standard'
+          optimizeCss: 'standard',
+          uglify: {
+            defines: {
+              DBG: ['name', 'false']
+            }
+          }
         }
       }
     },

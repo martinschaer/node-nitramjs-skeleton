@@ -24,8 +24,8 @@ require.config({
   }
 });
 
-/* TODO: al buildear setear DBG = false y que uglify elimine codigo inaccesable */
-var DBG = (typeof DBG == 'undefined') ? true : DBG;
+// uglify elimina el codigo inaccesable
+window.DBG = (typeof DBG == 'undefined') ? true : DBG;
 
 // Avoid `console` errors in browsers that lack a console.
 (function() {
