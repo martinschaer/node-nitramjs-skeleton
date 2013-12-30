@@ -1,8 +1,20 @@
 define(['jquery', 'history'], function($) {
   'use strict';
 
+  var getBodyClasses = function() {
+    var r, c, arr = [];
+    for (var key in A.routes) {
+      c = A.routes[key];
+      if (typeof c.bodyClass !== 'undefined') {
+        arr.push(c.bodyClass);
+      }
+    }
+    r = arr.join(' ');
+    return r;
+  };
+
   var A = {
-    version: '0.0.1',
+    version: '0.0.2',
     routes: {},
 
     // on State change
@@ -92,6 +104,12 @@ define(['jquery', 'history'], function($) {
       // call controller
       callController = function(data) {
         var f = replace ? 'replaceState' : 'pushState';
+
+        // body class
+        if (typeof routeData.bodyClass !== 'undefined') {
+          $('body').removeClass(getBodyClasses())
+            .addClass(routeData.bodyClass);
+        }
 
         if (History.enabled) {
           // Push state
