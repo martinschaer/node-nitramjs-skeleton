@@ -19,8 +19,6 @@ var config = require('../../config/config')[env]
 //
 var parentController = function(req, res, ifXHR) {
 
-  var url = req.protocol + '://' + req.headers.host + req.url;
-
   if (typeof ifXHR == 'undefined') {
     ifXHR = function() {
       res.json({})
@@ -32,10 +30,7 @@ var parentController = function(req, res, ifXHR) {
   } else {
     res.render('home', {
       title: config.title,
-      config: config,
-      // host: req.headers.host,
-      url: url,
-      bodyClass: 'home'
+      config: config
     })
   }
 }

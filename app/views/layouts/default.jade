@@ -1,4 +1,4 @@
-doctype 5
+doctype html
 html
   head
     meta(charset="utf-8")
@@ -20,7 +20,7 @@ html
     script(id="requirescript", data-main='js/main', src='js/lib/require.js')
     script.
       document.getElementById('requirescript').setAttribute("data-main", "js/main");
-  body(class="#{typeof bodyClass == 'undefined' ? '' : bodyClass}")
+  body
     
     block content
 

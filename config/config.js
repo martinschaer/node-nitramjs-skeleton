@@ -17,13 +17,15 @@ module.exports = {
     publicdir: '/public',
     title: '[TODO: title]',
     fbappid: '[TODO: Facebook App ID]',
-    gaid: '[TODO: UA]'
+    gaid: '[TODO: UA]',
+    domain: '[TODO: domain]'
   },
   production: {
     root: rootPath,
     publicdir: '/public',
     title: '[TODO: title]',
     fbappid: '[TODO: Facebook App ID]',
-    gaid: '[TODO: UA]'
+    gaid: '[TODO: UA]',
+    domain: 'http://www.nitramjs.com'
   }
 }
