@@ -53,3 +53,21 @@ exports.helloworld = function(req, res) {
     res.render('partials/helloworld')
   })
 }
+
+//
+// contact
+//
+exports.contact = function(req, res) {
+  parentController(req, res, function() {
+    res.render('partials/contact')
+  })
+}
+
+//
+// Features
+//
+exports.features = function(req, res) {
+  parentController(req, res, function() {
+    res.render('partials/features')
+  })
+}

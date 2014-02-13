@@ -5,6 +5,8 @@ require.config({
     'facebook': '//connect.facebook.net/es_ES/all',
     'history': '//cdnjs.cloudflare.com/ajax/libs/history.js/1.8/bundled/html5/native.history',
     // 'handlebars': '//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.0/handlebars.min',
+    // 'bootstrap': '//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min"',
+    'bootstrap': 'lib/bootstrap.min"',
     'nitram': 'lib/nitram.min',
     'app': 'app'
   },
@@ -18,6 +20,10 @@ require.config({
     'history': {
       deps: ['jquery']
     },
+    'bootstrap': {
+      deps: ['jquery']
+    },
+
     // 'handlebars': {
     //   exports: 'Handlebars'
     // }

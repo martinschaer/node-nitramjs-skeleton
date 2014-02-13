@@ -14,7 +14,8 @@ module.exports = function(app) {
   // main
   app.get('/', main.home)
   app.get('/helloworld', main.helloworld)
-
+  app.get('/contact', main.contact)
+  app.get('/features', main.features)
   //
   // API
   //

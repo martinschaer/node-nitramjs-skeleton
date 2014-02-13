@@ -60,7 +60,8 @@ module.exports = function(grunt) {
     watch: {
       compass: {
         files: ['public/sass/**/*.scss'],
-        tasks: ['compass:dev']
+        tasks: ['compass:dev'],
+        liveroad: true
       },
       jshint: {
         files: ['<%= jshint.all %>'],
