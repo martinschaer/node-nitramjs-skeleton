@@ -43,6 +43,15 @@ define(['jquery', 'nitram'], function($, nitram) {
     $('#false').hide();
     this.compile($('#mainView').html(data));
 
+    // $('body').css({
+    //   backgroundColor: 'red'
+    // });
+
+    // nitram.onRouteChange = function() {
+    //   $('body').css({
+    //     backgroundColor: '#fff'
+    //   });
+    // };
   };
 
 
