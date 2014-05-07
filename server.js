@@ -28,9 +28,6 @@ app.use(function(req, res, next) {
 // Bootstrap application settings
 require('./config/express')(app, config)
 
-// Bootstrap routes
-require('./config/routes')(app)
-
 // Start the app by listening on <port>
 var port = process.env.PORT || 5000
 app.listen(port, function() {
