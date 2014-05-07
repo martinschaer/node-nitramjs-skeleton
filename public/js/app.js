@@ -12,10 +12,10 @@ define(['jquery', 'nitram'], function($, nitram) {
       req: true,
       bodyClass: 'home'
     },
-    '/helloworld': {
+    '/helloworld/:id': {
       controller: 'helloWorldController',
       title: 'Hello World',
-      req: true,
+      req: false,
       bodyClass: 'hello'
     },
     '/contact': {
@@ -40,6 +40,7 @@ define(['jquery', 'nitram'], function($, nitram) {
 
   nitram.homeController = function(route, data) {
     // compile to intercept new links
+    $('#false').hide();
     this.compile($('#mainView').html(data));
 
   };
@@ -47,20 +48,23 @@ define(['jquery', 'nitram'], function($, nitram) {
 
   nitram.contactController = function(route, data) {
     // compile to intercept new links
+    $('#false').hide();
     this.compile($('#mainView').html(data));
   };
 
   nitram.featuresController = function(route, data) {
     // compile to intercept new links
+    $('#false').hide();
     this.compile($('#mainView').html(data));
   };
 
 
-  nitram.helloWorldController = function(route, data) {
-    // compile to intercept new links
-    // $('#myTab a').tab('show');
-    this.compile($('#mainView').html(data));
-
+  nitram.helloWorldController = function(route, data, param) {
+    $('#mainView').empty()
+    console.log(param.id);
+    $('#false').show();
+    $('#myTab li').removeClass('active').eq(param.id - 1).addClass('active');
+    $('.tab-content div').removeClass('active').eq(param.id - 1).addClass('active');
   };
 
   // ----------------------

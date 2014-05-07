@@ -18,9 +18,24 @@ block content
                 li.li-contact
                   a(href='/contact', data-xhr='1') Contact
                 li.li-hello
-                  a(href='/helloworld', data-xhr='1') hello world
+                  a(href='/helloworld/', data-xhr='1') hello world
           #mainView.inner.cover
-            
+          #false
+            ul#myTab.nav.nav-tabs
+              li
+                  a( href='/helloworld/1', data-xhr='1', data-toggle='tab') Home
+              li
+                a( href='/helloworld/2', data-xhr='1', data-toggle='tab') Profile
+              li
+                a( href='/helloworld/3', data-xhr='1', data-toggle='tab') Messages
+              li
+                a( href='/helloworld/4', data-xhr='1', data-toggle='tab') Settings
+            .tab-content
+              #home.tab-pane ... 1
+              #profile.tab-pane ...2
+              #messages.tab-pane ...3
+              #settings.tab-pane ...4
+              
 
 
 
